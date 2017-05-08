@@ -39,5 +39,15 @@ describe('each()', () => {
     });
     expect(count).toBe(3);
   });
+
+  it('iterates every element of an array in order, passing that element and the entire array to the callback', () => {
+    const arr = ['a', 'b', 'c'];
+    let count = 0;
+    _.each(arr, function(element, index, array) {
+      expect(element).toEqual(array[count]);
+      count += 1;
+    });
+    expect(count).toBe(3);
+  });
 });
 

@@ -26,4 +26,9 @@ describe('indexOf()', () => {
     expect(_.indexOf(arr, 'bar', 2)).toBe(3);
   });
 
+  it('returns -1 if you attempt to find an array within an array', () => {
+    const arr = [['foo'], ['bar'], ['baz']];
+    expect(_.indexOf(arr, ['foo'])).toBe(-1);
+  });
+
 });

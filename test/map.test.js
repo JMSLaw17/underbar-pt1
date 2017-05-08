@@ -7,14 +7,13 @@ describe('map()', () => {
     expect(mappedArr).toEqual([1, 4, 9, 16, 25]);
   });
 
-  it('maps every number in an array-like object of numbers to their square', () => {
-    const arrayLikeObj = {
-      length: 3,
-      0: 1,
-      1: 2,
-      2: 3
+  it('maps every number in an object with numbers to their square', () => {
+    const object = {
+      a: 1,
+      b: 2,
+      c: 3
     };
-    const mappedArr = _.map(arrayLikeObj, (el) => el * el);
-    expect(mappedArr).toEqual([1, 4, 9]);
+    const mappedObj = _.map(object, (el) => el * el);
+    expect(mappedObj).toEqual([1, 4, 9]);
   });
 });

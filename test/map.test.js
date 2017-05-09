@@ -7,7 +7,7 @@ describe('map()', () => {
     expect(mappedArr).toEqual([1, 4, 9, 16, 25]);
   });
 
-  it('maps every number in an object with numbers to their square', () => {
+  it('maps every number in an object with numbers to their squares', () => {
     const object = {
       a: 1,
       b: 2,

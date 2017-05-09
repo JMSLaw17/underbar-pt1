@@ -13,4 +13,14 @@ describe('reduce()', () => {
     expect(result).toEqual(15);
   });
 
+  it('reduces an object with numbers to a sum', () => {
+    const points = {
+      gameOne: 5,
+      gameTwo: 7,
+      gameThree: 8
+      };
+    const result = _.reduce(points, (acc, num) => acc + num, 0);
+    expect(result).toEqual(20);
+  });
+
 });

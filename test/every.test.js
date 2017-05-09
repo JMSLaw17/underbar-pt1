@@ -17,5 +17,14 @@ describe('every()', () => {
       expect(_.every(nums, num => num % 2 === 1)).toBe(false);
     });
 
+    it('returns true if all people objects in an array have an age greater than ten', () => {
+      const people = [
+        { name: 'Harriet', age: 12},
+        { name: 'Lazarus', age: 999},
+        { name: 'Bethany', age: 14}
+      ];
+      expect(_.every(people, person => person.age > 10)).toBe(true);
+    });
+
   });
 });
